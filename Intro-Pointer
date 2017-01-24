@@ -1,0 +1,42 @@
+https://www.hackerrank.com/challenges/c-tutorial-pointer
+
+#include <stdio.h>
+
+/*void update(int *a,int *b) {
+    int temp = *a;// create variable for original *a value
+
+    *a = *a + *b; //sum
+
+    if (temp > *b) // use temp because *a value is changed
+        *b = temp - *b; 
+    else if (*b > temp)
+        *b = *b - temp;    
+}*/
+//Simple solution, subtracts smaller value from greater value to ensure positive answer
+
+/*void update(int *a,int *b) {
+    int temp = *a;// create variable for original *a value
+
+    *a = *a + *b; //sum
+    *b = temp - *b; 
+    
+    if (*b < 0){
+        *b = -*b;
+    }
+    else{
+        *b = *b;
+    }
+        
+}*/ 
+//Same idea as above but doesn't select for order of substraction
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
