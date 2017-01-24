@@ -12,16 +12,16 @@ Add `int max_of_four(int a, int b, int c, int d)` here.
     int four [4] = {a, b, c, d};
     int maxValue = 0;
     for(int i = 0; i< 3; i++){
-        if (four[i+1] > four[i] || four[i+1] == four[i] ){
-        maxValue = four[i+1];
+        if (four[i] > maxValue){
+        maxValue = four[i];
         }
         else{
-        maxValue = four[i];
+        maxValue = maxValue;
         }
     }
     return maxValue;
 }*/
-//This solution is better for a greater range of values; however, fails certain test cases. 
+//Changed solution to compare array value to maxValue 
 
 
 /*int max_of_four(int a, int b, int c, int d){
