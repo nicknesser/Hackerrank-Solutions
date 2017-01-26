@@ -1,0 +1,35 @@
+// https://www.hackerrank.com/challenges/variable-sized-arrays
+// Thanks to yalaudah for this solution
+// Note I did not write this program, but I found the solution to be effective so I am keeping it in the repository.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+int numSequence,numQueries, k;
+
+    cin >> numSequence >> numQueries;
+
+
+    int** array = new int*[numSequence]; //sequence
+ 
+    int** query = new int*[numQueries]; //query
+
+    for(int i=0;i<numSequence;i++){ //takes input for number of elements in each array
+        cin >> k; 
+        array[i] = new int[k]; //creates array i with k elements
+        
+        for (int j=0;j<k;j++){
+            cin >> array[i][j]; // assigns proper values to each array
+        } 
+    }
+
+    for(int i = 0; i<numQueries;i++){
+        query[i] = new int[2];
+        cin >> query[i][0] >> query[i][1]; // takes array input and element of array input 
+        cout << array[query[i][0]][query[i][1]] << endl; //outputs proper element
+    }
+  
+	return 0;
+}
