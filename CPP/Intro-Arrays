@@ -1,0 +1,19 @@
+// https://www.hackerrank.com/challenges/arrays-introduction
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a; //initialize variable a
+    cin>> a; // take first line of input determining number of elements in array
+    int rev [a]; //declare array with a elements
+    for(int i = 0; i< a; i++){
+        cin>>rev [i]; //for loop to take input into array
+    }
+    for(int b = a-1; b >= 0; b--){
+        cout<<rev[b]<<(" "); for loop incrementing negatively to attain reverse array
